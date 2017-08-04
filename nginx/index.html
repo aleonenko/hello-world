@@ -14,6 +14,7 @@
 <script>
   window.onload = function () {
     setHello();
+    setGoodbye();
     setWorld();
   };
 
@@ -26,12 +27,21 @@
     });
   }
 
-  function setWorld () {
-    window.fetch('/world').then(function (res) {
+  function setGoodbye () {
+    window.fetch('/goodbye').then(function (res) {
       return res.text();
     }).then(function (val) {
       const h2 = document.getElementsByTagName('h2')[0];
       h2.innerHTML = val + h2.innerHTML;
+    });
+  }
+
+  function setWorld () {
+    window.fetch('/world').then(function (res) {
+      return res.text();
+    }).then(function (val) {
+      const h3 = document.getElementsByTagName('h3')[0];
+      h3.innerHTML = val + h3.innerHTML;
     });
   }
 </script>
