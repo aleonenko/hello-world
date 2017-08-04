@@ -7,6 +7,9 @@
 
 ## Overview
 
+So as I understand we have 2 services on node.js which display words - Hello and World,these services are registered in Consul service discovery system
+Nginx is used as a simple web server
+
 The application is divided into 4 parts:
 
 1. nginx - nginx server rendering static assets
@@ -18,7 +21,3 @@ The application is divided into 4 parts:
 ![application configuration diagram](application-diagram.jpg)
 
 
-# Hello World running on Triton
-
-1. `./triton-docker-setup.sh -k us-east-1.api.joyent.com <ACCOUNT> ~/.ssh/<PRIVATE_KEY_FILE>`
-2. `docker-compose up -d`
